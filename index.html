@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeoYeon's Portfolio</title>
+    <style>
+        @font-face {
+            font-family: 'Neothic';
+            src: url("fonts/Derivia-Regular.otf") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }   
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: left;
+        }
+        .nav {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            display: flex;
+        }
+        .nav a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .content img {
+            width: 372px;
+            height: 466px;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 150px;
+            left: -35px;
+        }
+        .text-overlay h1 {
+            margin: 0;
+            font-size: 48px;
+            line-height: 1.2;
+            font-weight: normal; /* 폰트 두께 설정 */
+        }
+        .text-overlay p {
+            margin: 10px 0 0 0;
+            font-size: 16px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .neothic-font {
+            font-family: 'Neothic', sans-serif;
+            font-weight: normal; /* 폰트 두께 설정 */
+            letter-spacing: 2px; /* 자간 설정 */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#resume">RESUME</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+    <div class="content">
+        <img src="galaxy.gif" alt="Galaxy">
+        <div class="text-overlay">
+            <h1 class="neothic-font">Hi, I am</h1>
+            <h1 class="neothic-font">Tack Suyeon</h1>
+            <p>I am a marketer. I can provide something</p>
+        </div>
+    </div>
+</body>
+</html>

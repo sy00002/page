@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4 En</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-Black.otf') format('opentype');
+            font-weight: 900;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-ExtraBold.otf') format('opentype');
+            font-weight: 800;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-SemiBold.otf') format('opentype');
+            font-weight: 600;
+        }
+        body {
+            font-family: 'Pretendard', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .title {
+            font-size: 2.3em;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .date {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .content{
+            font-size: 0.8em;
+            font-weight: 600;
+            line-height: 2em;
+        }
+        .date, .text-content p {
+            font-size: 1em;
+            font-weight: 600;
+        }
+        .skills p {
+            font-size: 0.7em;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .text-content {
+            text-align: left;
+            font-size: 1em;
+            line-height: 1.5em;
+            width: 60%;
+        }
+        .main-image img {
+            width: 100%; /* Adjust the width as needed */
+            max-width: 980px; /* Adjust the max width as needed */
+            margin-left: 0px;
+            margin-top: -120px;
+        }
+        .skills {
+            display: flex;
+            justify-content:left;
+            gap:15px; /* Add gap to control spacing */
+            margin: 20px 0;
+        }
+        .skills div {
+            text-align: center;
+            flex: 0 1 140px; /* Flex property to allow shrinking */
+            margin: 0;
+        }
+        .skills img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="date">2023.05-06</div>
+        <div class="title">Marketing Is Luv</div>
+        <div class="subtitle">IMC Marketing Strategy Proposal</div>
+        <div class="main-content">
+            <div class="text-content">
+                <p>Contribution : Planning 25%, Production 5%, PT 50% (n=5)</p>
+                <p>Role : Analysis and target identification, production feedback  <br> ㅤㅤㅤPresentation(PT), marketing strategy proposal
+                </p>
+                <p>Skills Gained Through the Project : </p>
+                <div class="skills">
+                    <div>
+                        <img src="D1.jpg" alt="Skill 1">
+                        <p>Creative content planning skills</p>
+                    </div>
+                    <div>
+                        <img src="D2.jpg" alt="Skill 2">
+                        <p>Analytical and marketing strategy formulation skills</p>
+                    </div>
+                    <div>
+                        <img src="D3.jpg" alt="Skill 3">
+                        <p>Effective Presentation Skills</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-image">
+                <img src="PIC4.png" alt="Main Image">
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                In response to the problem presented by the CEO of the startup 'Reverse Mountain', we proposed a marketing plan for transitioning the scheduling system 'Time Collabo' to B2C. Using 3C and SWOT analysis techniques, we thoroughly analyzed the service, competing services, customers, and external situations. 
+From this, we identified 'clean and intuitive design' and 'AI schedule recommendation system' as differentiating factors, and selected the 10s and 20s age groups with a self-development lifestyle as our target market through market segmentation. We chose Instagram, Everytime banners, YouTube, and mobile pop-up stores in university areas as promotional channels frequently used by this target group. 
+We developed an IMC strategy to enhance consumer awareness by delivering the message of 'the necessity of schedule management' using the same 'Stone' character across various promotional channels.
+
+            </p>
+        </div>
+    </div>
+</body>
+</html>

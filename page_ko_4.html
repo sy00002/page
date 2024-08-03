@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4 Ko</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-Black.otf') format('opentype');
+            font-weight: 900;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-ExtraBold.otf') format('opentype');
+            font-weight: 800;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-SemiBold.otf') format('opentype');
+            font-weight: 600;
+        }
+        body {
+            font-family: 'Pretendard', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .title {
+            font-size: 2.3em;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .date {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .content{
+            font-size: 0.8em;
+            font-weight: 600;
+            line-height: 2em;
+        }
+        .date, .text-content p {
+            font-size: 1em;
+            font-weight: 600;
+        }
+        .skills p {
+            font-size: 0.7em;
+            font-weight: 600;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .text-content {
+            text-align: left;
+            font-size: 1em;
+            line-height: 1.5em;
+            width: 60%;
+        }
+        .main-image img {
+            width: 100%; /* Adjust the width as needed */
+            max-width: 980px; /* Adjust the max width as needed */
+            margin-left: 0px;
+            margin-top: -120px;
+        }
+        .skills {
+            display: flex;
+            justify-content:left;
+            gap:15px; /* Add gap to control spacing */
+            margin: 20px 0;
+        }
+        .skills div {
+            text-align: center;
+            flex: 0 1 140px; /* Flex property to allow shrinking */
+            margin: 0;
+        }
+        .skills img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="date">2023.05-06</div>
+        <div class="title">Marketing Is Luv</div>
+        <div class="subtitle">IMC 마케팅 전략 제안</div>
+        <div class="main-content">
+            <div class="text-content">
+                <p>기여도 : 기획 25%  제작 5% 발표 50% (n=5)</p>
+                <p>역할 : 분석 및 타깃 도출, 마케팅 전략 제안 <br> ㅤㅤㅤ제작 피드백, 발표</p>
+                <p>프로젝트를 통해 쌓은 능력 :</p>
+                <div class="skills">
+                    <div>
+                        <img src="D1.jpg" alt="Skill 1">
+                        <p>창의적인 콘텐츠 기획 능력</p>
+                    </div>
+                    <div>
+                        <img src="D2.jpg" alt="Skill 2">
+                        <p>분석 및 마케팅 전략 수립 능력</p>
+                    </div>
+                    <div>
+                        <img src="D3.jpg" alt="Skill 3">
+                        <p>효과적인 발표 역량</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-image">
+                <img src="PIC4.png" alt="Main Image">
+            </div>
+        </div>
+        <div class="content">
+            <p> 
+                스타트업 '리버스마운틴'의 CEO께서 제시한 문제에 대해 B2C 전환을 목표로 일정 관리 시스템, 'Time Collabo'의 마케팅 방안을 제안했다. 3C와 SWOT 분석 기법을 활용해 서비스, 경쟁 서비스, 고객, 외부 상황을 철저히 분석했다. 
+                이를 통해 '깔끔하고 직관적인 디자인'과 'AI 일정 추천 시스템'을 차별화 요소로 도출하고, 시장 세분화를 통해 자기 계발 라이프스타일을 가진 10·20세대를 타깃으로 선정했다. 
+                이러한 타깃이 자주 이용하는 인스타그램, 에브리타임 배너, 유튜브, 대학가 이동형 팝업스토어를 홍보 채널로 선택했다. 
+                다양한 홍보 채널에서 동일한 '돌' 캐릭터를 활용해 '일정 관리의 필요성' 메시지를 전하며 소비자 인지도를 제고하는 IMC 전략을 수립했다. 
+            </p>
+        </div>
+    </div>
+</body>
+</html>

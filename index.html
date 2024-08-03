@@ -3,43 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SeoYeon's Portfolio</title>
+    <title>MY PAGE</title>
     <style>
         @font-face {
             font-family: 'Neothic';
             src: url("fonts/Derivia-Regular.otf") format('truetype');
             font-weight: normal;
             font-style: normal;
-        }   
+        }
 
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: black;
             color: white;
+        }
+        .about-section {
+            background: url('darkstar.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .page-section {
+            background: url('darkstar.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .nav {
+            position: fixed;
+            top: 20px;
+            right: 27px;
+            display: flex;
+            z-index: 1000; /* z-index를 높게 설정 */
+        }
+        .nav button {
+            margin-left: 7px;
+            color: white;
+            background: none;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            pointer-events: auto; /* pointer-events 설정 */
+            z-index: 1001; /* z-index를 높게 설정 */
+        }
+        .nav button:hover {
+            text-decoration: underline;
+        }
+        .content {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             text-align: left;
-        }
-        .nav {
-            position: absolute;
-            top: 24px;
-            right: 32px;
-            display: flex;
-        }
-        .nav a {
-            margin-left: 20px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .content {
             position: relative;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
         }
         .content img {
             width: 372px;
@@ -47,14 +62,15 @@
         }
         .text-overlay {
             position: absolute;
-            top: 150px;
-            left: -35px;
+            top: 175px;
+            left: 500px;
+            transform: translateX(-50%);
         }
         .text-overlay h1 {
             margin: 0;
             font-size: 48px;
             line-height: 1.2;
-            font-weight: normal; /* 폰트 두께 설정 */
+            font-weight: normal;
         }
         .text-overlay p {
             margin: 10px 0 0 0;
@@ -64,25 +80,532 @@
         }
         .neothic-font {
             font-family: 'Neothic', sans-serif;
-            font-weight: normal; /* 폰트 두께 설정 */
-            letter-spacing: 2px; /* 자간 설정 */
+            font-weight: normal;
+            letter-spacing: 4px;
+        }
+        .page-section {
+            height: 100vh;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+        .about-section {
+            background: url('darkstar.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .about-header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 630px;
+            left: 0;
+            right: 0;
+        }
+        .about-header img {
+            width: 118px;
+        }
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 50px;
+            position: relative;
+        }
+        .profile-pic {
+            position: relative;
+            width: 400px;
+        }
+        .profile-pic img {
+            position: absolute;
+        }
+        .info {
+            max-width: 50%;
+            position: relative;
+        }
+        .info h1 {
+            font-size: 36px;
+        }
+        .info h2 {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #72449C;
+        }
+        .info p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .info .highlight {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        #skill {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('darkstar.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        /* skill3.html 스타일 추가 */
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 1240px;
+            left: 0;
+            right: 0;
+        }
+        .header img {
+            width: 125px;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .design, .office {
+            width: 45%;
+            position:relative;
+            margin: 0 2.5%;
+        }
+        .design {
+            top: 5px; /* Adjust as needed */
+            left: -130px; /* Adjust as needed */
+        }
+        .office {
+            top: -60px; /* Adjust as needed */
+            right: 0px; /* Adjust as needed */
+        }
+        .title {
+            font-size: 55px;
+            font-family: Arial;
+            font-weight: bold;  
+            font-style: italic;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .office .title {
+        position: relative; /* Allow horizontal positioning */
+        left: 133px; /* Adjust this value to move the title right */
+        }
+        .skill {
+            margin: 20px 0;
+        }
+        .skill-title {
+            font-size: 20px;
+            font-family: Arial;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .skill-title span {
+            display: flex;
+            align-items: center;
+        }
+        .progress {
+            width: 100%;
+            height: 3px;
+            background: white;
+            border-radius: 7px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        .progress.excel, .progress.ppt, .progress.word, .progress.access {
+            width: 65%;
+            height: 6px;
+            margin: 10px auto;
+        }
+        .progress-bar {
+            height: 100%;
+            background: #72449C;
+            border-radius: 100px;
+        }
+        .progress-bar.photoshop { width: 90%; }
+        .progress-bar.illustrator { width: 80%; }
+        .progress-bar.premiere { width: 80%; }
+        .progress-bar.excel { width: 80%; }
+        .progress-bar.ppt { width: 90%; }
+        .progress-bar.word { width: 75%; }
+        .progress-bar.access { width: 75%; }
+        
+        .ms-office-icons {
+            position: absolute;
+            right: -55px;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-top: -5px;
+        }
+        .ms-office-icons div {
+            text-align: center;
+            width: 80px;
+        }
+        .ms-office-icons img {
+            width: 80px;
+            height: 80px;
+        }
+        .astronaut {
+            position: absolute;
+            top: 1520px;
+            right: 180px;
+            width: 300px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 335px; /* 너비 변경 */
+            height: 345px; /* 높이 추가 */
+            background-color: rgba(63, 18, 105, 0.92);
+            color: #fff;
+            text-align: left;
+            font-size: 13px;
+            font-family: Arial;
+            font-weight: normal;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%; /* Position the tooltip above the text */
+            left: -142px;
+            margin-left: -30px; /* Center the tooltip */
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            flex-direction: column; /* Stack text and images vertically */
+        }
+
+        .tooltip .tooltiptext .horizontal-images {
+            display: flex;
+            justify-content: center;
+            gap: 7px; /* Add some space between the images */
+            margin: 2px 0; /* Add some margin around the image container */
+        }
+
+        .tooltip .tooltiptext img {
+            margin: 2px 0; /* Add some margin between images and text */
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: rgba(63, 18, 105, 0.92) transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* resume 섹션 추가 */
+        #resume {
+            padding: 50px;
+        }
+        .header4 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 1850px;
+            left: 0;
+            right: 0;
+        }
+        .header4 img {
+            width: 125px;
+        }
+        .resume-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .section {
+            flex: 1;
+            padding: 20px;
+        }
+        .section h1 {
+            margin-bottom:-300x;
+            font-size: 2.5em;
+        }
+        .education {
+            text-align: left;
+            margin-right: 100px;
+        }
+        .experience {
+            text-align: left;
+            margin-left: 200px;
+        }
+        .ma {
+            position: absolute;
+            top: 2190px;
+            left: 60px;
+            width: 250px;
+            opacity: 0.75;
+        }
+        .entry {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .entry-content {
+            flex-grow: 1;
+        }
+        .entry-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: -5px;
+            color: #72449C;
+        }
+        .entry-date {
+            font-size: 0.75em;
+            margin-bottom: -8px;
+        }
+        .entry-detail {
+            font-size: 0.9em;
+            margin-bottom: -5px;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            margin-bottom: -35px;
+        }
+        .buttons a {
+            display: block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            color: white;
+            margin: 2px 0;
+            font-size: 0.9em;
+            padding: -2px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .buttons a:hover {
+            background: white;
+            color: black;
         }
     </style>
 </head>
 <body>
     <div class="nav">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#resume">RESUME</a>
-        <a href="#contact">CONTACT</a>
+        <button type="button" onclick="scrollToSection('home')">HOME</button>
+        <button type="button" onclick="scrollToSection('about')">ABOUT</button>
+        <button type="button" onclick="scrollToSection('skill')">SKILL</button>
+        <button type="button" onclick="scrollToSection('resume')">RESUME</button>
     </div>
-    <div class="content">
+    <div id="home" class="content">
         <img src="galaxy.gif" alt="Galaxy">
         <div class="text-overlay">
             <h1 class="neothic-font">Hi, I am</h1>
             <h1 class="neothic-font">Tack Suyeon</h1>
-            <p>I am a marketer. I can provide something</p>
+            <p>ㅤ<br>ㅤ<br>ㅤA passionate astronaut opening up <br>ㅤㅤㅤlimitless possibilities through marketing.</p>
         </div>
     </div>
+    <div id="about" class="page-section about-section">
+        <div class="about-header">
+            <img src="aboutme.png" alt="About Me">
+        </div>
+        <div class="about-container">
+            <div class="profile-pic">
+                <img src="moon.png" alt="Moon" style="bottom: -335px; left: 0; width: 100%;">
+                <img src="profile.png" alt="Profile Picture" style="bottom: -120px; left: 50%; transform: translateX(-50%); width: 250px;">
+            </div>
+            <div class="info">
+                <h1>Hi there! I'm TACK SUYEON</h1>
+                <h2>MARKETER</h2>
+<p>I am a marketing highflier with a strong sense of responsibility and with active and engaging communication skills. My goal is to continuously learn and grow, delivering creative and effective marketing strategies that provide value to both the company and its consumers.</p>
+                <p class="highlight">Birthday: March 13, 2002</p>
+                <p class="highlight">Phone: 010·8229·6416</p>
+                <p class="highlight">Email: syyou0123@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <div id="skill" class="page-section">
+        <div class="header">    
+            <img src="skill.png" alt="Skill">
+        </div>
+        <div class="container">
+            <div class="design">
+                <div class="title">DESIGN</div>
+                <div class="skill">
+                    <div class="skill-title">
+                        <span style="position: relative; top: 10px;">Adobe Illustrator</span>
+                        <span class="tooltip" style="position: relative; left: -50px; top: 11px;">+
+                            <span class="tooltiptext">☑️ Card News Design<br>
+                                <div class="horizontal-images">
+                                <img src="card1.png" alt="Card1" style="width: 100px; display:block;">
+                                <img src="card2.png" alt="Card2" style="width: 100px; display:block;">
+                                <img src="card3.jpg" alt="Card3" style="width: 100px; display:block;"></div>
+                                <div class="horizontal-images">
+                                <img src="card4.jpg" alt="Card4" style="width: 100px; display:block;">
+                                <img src="card5.jpg" alt="Card5" style="width: 100px; display:block;">
+                                <img src="card6.jpg" alt="Card6" style="width: 100px; display:block;">
+                                </div>
+                                <div class="horizontal-images">
+                                    <img src="card7.jpg" alt="Card7" style="width: 100px; display:block;">
+                                    <img src="card8.jpg" alt="Card8" style="width: 100px; display:block;">
+                                    <img src="card9.jpg" alt="Card9" style="width: 100px; display:block;"></div>
+                            </span>
+                            </span>
+                        <span style="position: relative; left: 0px; top: 18px; font-family: Arial; font-weight: bold; font-size: 13px; color: #72449C;">90%</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar photoshop"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-title">
+                        <span style="position: relative; top: 10px;">Adobe Photoshop</span>
+                        <span class="tooltip" style="position: relative; left: -56px; top: 11px;">+
+                            <span class="tooltiptext">☑️ Text Effect<br>
+                                <img src="texteffect1.png" alt="Text Effect 1" style="width: 350px; display:block;">
+                                <div class="horizontal-images">
+                                <img src="texteffect2.png" alt="Text Effect 2" style="width: 100px; display:block;">
+                                <img src="texteffect3.png" alt="Text Effect 3" style="width: 100px; display:block;">
+                                </div>
+                                ☑️ Image Adjustments & Composite (Mockup)<br>☑️ Remove Image Backgrounds<br>
+                                </span>
+                        </span>
+                        <span style="position: relative; left: 0px; top: 18px; font-family: Arial; font-weight: bold; font-size: 13px; color: #72449C;">80%</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar illustrator"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-title">
+                        <span style="position: relative; top: 10px;">Adobe Premiere Pro</span>
+                        <span class="tooltip" style="position: relative; left: -65px; top: 11px;">+
+                            <span class="tooltiptext">☑️ Basic Video Production<br> <br>- Cut Editing<br>- Screen Adjustment<br>- Responsive Subtitles + Animated Subtitles<br>- Effect: Chroma Key, White Balance, Track Matte etc.
+                                <div class="horizontal-images">
+                                <img src="city.gif" alt="City" style="width: 100px; display:block;">
+                                <img src="game1.gif" alt="Game1" style="width: 100px; display:block;">
+                                <img src="game2.gif" alt="Game2" style="width: 100px; display:block;">
+                            </div>
+                            </span>
+                        </span>
+                        <span style="position: relative; left: 0px; top: 18px; font-family: Arial; font-weight: bold; font-size: 13px; color: #72449C;">80%</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar premiere"></div></div>
+                </div>
+            </div>
+            <div class="office">
+                <div class="title">MS OFFICE</div>
+                <div class="ms-office-icons">
+                    <div>
+                        <img src="excel.png" alt="Excel">
+                        <div class="progress excel"><div class="progress-bar excel"></div></div>
+                    </div>
+                    <div>
+                        <img src="ppt.png" alt="PowerPoint">
+                        <div class="progress ppt"><div class="progress-bar ppt"></div></div>
+                    </div>
+                    <div>
+                        <img src="word.png" alt="Word">
+                        <div class="progress word"><div class="progress-bar word"></div></div>
+                    </div>
+                    <div>
+                        <img src="access.png" alt="Access">
+                        <div class="progress access"><div class="progress-bar access"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="astronaut.png" alt="Astronaut" class="astronaut">
+    </div>
+    <div id="resume" class="page-section">
+        <div class="header4">
+            <img src="resume.png" alt="Resume">
+        </div>
+        <div class="resume-content">
+            <div class="section education">
+                <h1>Education</h1>
+                <div class="entry">
+                    <div class="entry-content">
+                        <p class="entry-title">School of Business Administration</p>
+                        <p class="entry-date">2021-2025</p>
+                        <p class="entry-detail">Sungshin Women's University</p>
+                    </div>
+                </div>  
+                <div class="entry">
+                    <div class="entry-content">
+                        <p class="entry-title">Department of English and Spanish</p>
+                        <p class="entry-date">2018-2021</p>
+                        <p class="entry-detail">Seoul Foreign Language High School</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section experience">
+                <h1>Experience</h1>
+                <div class="entry">
+                    <div class="entry-content">
+                        <p class="entry-title">Official YouTube Channel Operation</p>
+                        <p class="entry-date">2024.02 - 2024.07</p>
+                        <p class="entry-detail">GameMakers</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="page_ko_1.html">Ko</a>
+                        <a href="page_en_1.html">En</a>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="entry-content">
+                        <p class="entry-title">Campaign Strategy Proposal</p>
+                        <p class="entry-date">2024.04 - 05</p>
+                        <p class="entry-detail">LocknLock</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="page_ko_2.html">Ko</a>
+                        <a href="page_en_2.html">En</a>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="entry-content">
+                        <p class="entry-title">Social Problem Solution PT</p>
+                        <p class="entry-date">2023.11</p>
+                        <p class="entry-detail">UnivPT</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="page_ko_3.html">Ko</a>
+                        <a href="page_en_3.html">En</a>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="entry-content">
+                        <p class="entry-title">IMC Marketing Strategy Proposal</p>
+                        <p class="entry-date">2023.05 - 2023.06</p>
+                        <p class="entry-detail">Marketing Is Luv</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="page_ko_4.html">Ko</a>
+                        <a href="page_en_4.html">En</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="ma.png" alt="ma" class="ma">
+    </div>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>

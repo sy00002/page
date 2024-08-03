@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 En</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-Black.otf') format('opentype');
+            font-weight: 900;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-ExtraBold.otf') format('opentype');
+            font-weight: 800;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-SemiBold.otf') format('opentype');
+            font-weight: 600;
+        }
+        body {
+            font-family: 'Pretendard', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .title {
+            font-size: 2.3em;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .date {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .content{
+            font-size: 0.8em;
+            font-weight: 600;
+            line-height: 2em;
+        }
+        .date, .text-content p {
+            font-size: 1em;
+            font-weight: 600;
+        }
+        .skills p {
+            font-size: 0.7em;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .text-content {
+            text-align: left;
+            font-size: 1em;
+            line-height: 1.5em;
+            width: 60%;
+        }
+        .main-image img {
+            width: 100%; /* Adjust the width as needed */
+            max-width: 980px; /* Adjust the max width as needed */
+            margin-left: 0px;
+            margin-top: -120px;
+        }
+        .skills {
+            display: flex;
+            justify-content:left;
+            gap:15px; /* Add gap to control spacing */
+            margin: 20px 0;
+        }
+        .skills div {
+            text-align: center;
+            flex: 0 1 140px; /* Flex property to allow shrinking */
+            margin: 0;
+        }
+        .skills img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="date">2023.11.05-18</div>
+        <div class="title">UnivPT</div>
+        <div class="subtitle">Best Presentation Award for Social Problem Solution</div>
+        <div class="main-content">
+            <div class="text-content">
+                <p>Contribution : Planning 30%, Production 50% (n=5)</p>
+                <p>Role : Establishing direction, leading meetings <br> ㅤㅤㅤCreating PPT and mockups, concretizing ideas</p>
+                <p>Skills Gained Through the Project : </p>
+                <div class="skills">
+                    <div>
+                        <img src="C1.jpg" alt="Skill 1">
+                        <p>Strategic planning and problem-solving skills</p>                        
+                    </div>
+                    <div>
+                        <img src="C2.jpg" alt="Skill 2">
+                        <p>PPT and mockup design skills</p>
+                    </div>
+                    <div>
+                        <img src="c3.jpg" alt="Skill 3">
+                        <p>Proactive communication skills</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-image">
+                <img src="PIC3.png" alt="Main Image">
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                We won the Best Presentation Award by proposing an innovative solution, 'Signal Zone,' to address the 'subway congestion problem during commuting hours.' 
+Initially, the topic was 'transportation issues for people with disabilities,' but I boldly suggested a shift to 'subway congestion problems' and persuaded the team. 
+During the PPT creation process, I independently identified areas where ideas needed to be concretized and continuously led meetings to develop the team's ideas clearly and specifically. 
+To solve the issue of internal subway congestion, we proposed the idea of 'Signal Zone.' 
+This involves placing yellow and green tape in a 'Z' shape inside the subway to create designated waiting areas for passengers based on their exit direction. 
+Passengers exiting to the left would wait in the yellow zone, and those exiting to the right would wait in the green zone, minimizing inconvenience during exits and promoting order and courtesy.
+
+            </p>
+        </div>
+    </div>
+</body>
+</html>

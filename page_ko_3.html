@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 Ko</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-Black.otf') format('opentype');
+            font-weight: 900;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-ExtraBold.otf') format('opentype');
+            font-weight: 800;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('fonts/Pretendard-SemiBold.otf') format('opentype');
+            font-weight: 600;
+        }
+        body {
+            font-family: 'Pretendard', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .title {
+            font-size: 2.3em;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .date {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .content{
+            font-size: 0.8em;
+            font-weight: 600;
+            line-height: 2em;
+        }
+        .date, .text-content p {
+            font-size: 1em;
+            font-weight: 600;
+        }
+        .skills p {
+            font-size: 0.7em;
+            font-weight: 600;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .text-content {
+            text-align: left;
+            font-size: 1em;
+            line-height: 1.5em;
+            width: 60%;
+        }
+        .main-image img {
+            width: 100%; /* Adjust the width as needed */
+            max-width: 980px; /* Adjust the max width as needed */
+            margin-left: 0px;
+            margin-top: -120px;
+        }
+        .skills {
+            display: flex;
+            justify-content:left;
+            gap:15px; /* Add gap to control spacing */
+            margin: 20px 0;
+        }
+        .skills div {
+            text-align: center;
+            flex: 0 1 140px; /* Flex property to allow shrinking */
+            margin: 0;
+        }
+        .skills img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="date">2023.11.05-18</div>
+        <div class="title">UnivPT</div>
+        <div class="subtitle">사회문제 해결방안 PT 최우수상</div>
+        <div class="main-content">
+            <div class="text-content">
+                <p>기여도 : 기획 30% 제작 50% (n=5)</p>
+                <p>역할 : 방향성 확립, 아이디어 구체화, 회의 주도 <br> ㅤㅤㅤPPT 제작 및 목업 작업</p>
+                <p>프로젝트를 통해 쌓은 능력 :</p>
+                <div class="skills">
+                    <div>
+                        <img src="C1.jpg" alt="Skill 1">
+                        <p>전략적 기획 및 해결 능력</p>
+                    </div>
+                    <div>
+                        <img src="C2.jpg" alt="Skill 2">
+                        <p>PPT 및 목업 디자인 능력</p>
+                    </div>
+                    <div>
+                        <img src="C3.jpg" alt="Skill 3">
+                        <p>주도적인 커뮤니케이션 능력</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-image">
+                <img src="PIC3.png" alt="Main Image">
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                '출퇴근길 지하철 혼잡 문제'를 해결하기 위한 혁신적인 방안으로 'Signal Zone'을 제안하여 최우수상을 수상했다. 초기 주제였던 '장애인 교통 문제'에서 '지하철 혼잡 문제'로 과감한 방향성 전환을 제안하고 팀을 설득했다. 
+PPT 제작 과정에서 아이디어 구체화가 필요한 부분을 스스로 식별하고, 해당 부분에 대해 지속적으로 회의를 주도하여 팀의 아이디어를 명확하고 구체적으로 발전시켰다. 
+지하철 내부 혼잡 문제 해결을 위해 'Signal Zone'이라는 아이디어를 제시했다. 이는 지하철 내부에 'Z' 모양으로 노란색과 초록색 테이프를 부착하여 하차 방향에 따라 승객들이 대기할 수 있는 구역을 설정하는 방안이다. 
+노란색 구역에서는 왼쪽으로 하차하는 승객이, 초록색 구역에서는 오른쪽으로 하차하는 승객이 대기하도록 하여, 하차 시 불편함을 최소화하고 질서와 양보를 유도하는 목적으로 설계했다.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

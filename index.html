@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,14 +19,13 @@
             background-color: black;
             color: white;
         }
-        .about-section {
-            background: url('darkstar.png') no-repeat center center fixed;
-            background-size: cover;
-        }
+
+        .about-section,
         .page-section {
             background: url('darkstar.png') no-repeat center center fixed;
             background-size: cover;
         }
+
         .nav {
             position: fixed;
             top: 20px;
@@ -33,6 +33,7 @@
             display: flex;
             z-index: 1000;
         }
+
         .nav button {
             margin-left: 7px;
             color: white;
@@ -45,9 +46,11 @@
             pointer-events: auto;
             z-index: 1001;
         }
+
         .nav button:hover {
             text-decoration: underline;
         }
+
         .content {
             display: flex;
             justify-content: center;
@@ -56,54 +59,61 @@
             text-align: left;
             position: relative;
         }
+
         .content img {
-            width: 372px;
-            height: 466px;
+            max-width: 100%;
+            width: 30%;
+            height: auto;
         }
+
         .text-overlay {
             position: absolute;
-            top: 175px;
-            left: 500px;
-            transform: translateX(-50%);
-        }
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            text-align: left;
+        }   
+
         .text-overlay h1 {
             margin: 0;
-            font-size: 48px;
+            font-size: 3.8vw;
             line-height: 1.2;
             font-weight: normal;
         }
+
         .text-overlay p {
             margin: 10px 0 0 0;
-            font-size: 16px;
+            font-size: 1.2vw;
             line-height: 1.5;
             color: rgba(255, 255, 255, 0.7);
         }
+
         .neothic-font {
             font-family: 'Neothic', sans-serif;
             font-weight: normal;
             letter-spacing: 4px;
         }
+
         .page-section {
             height: 100vh;
             padding: 50px;
             box-sizing: border-box;
         }
-        .about-section {
-            background: url('darkstar.png') no-repeat center center fixed;
-            background-size: cover;
-        }
+
         .about-header {
             width: 100%;
             display: flex;
             justify-content: center;
             position: absolute;
-            top: 630px;
+            top: 103%;
             left: 0;
             right: 0;
         }
+
         .about-header img {
-            width: 118px;
+            width: 10%;
         }
+
         .about-container {
             display: flex;
             justify-content: space-between;
@@ -112,34 +122,55 @@
             padding: 0 50px;
             position: relative;
         }
-        .profile-pic {
-            position: relative;
-            width: 400px;
-        }
-        .profile-pic img {
-            position: absolute;
-        }
+
+        .profile-pic-container {
+    position: relative;
+    width: 30%;
+}
+
+.moon-image img {
+    width: 120%;
+    height: auto;
+    position: absolute;
+    bottom: -305px;
+    left: 0%;
+}
+
+.profile-image img {
+    width: 73%;
+    height: auto;
+    position: absolute;
+    bottom: -95px;
+    left: 60%;
+    transform: translateX(-50%);
+}
+
         .info {
             max-width: 50%;
             position: relative;
         }
+
         .info h1 {
-            font-size: 36px;
+            font-size: 2.5vw;
         }
+
         .info h2 {
             margin-top: 20px;
-            font-size: 24px;
+            font-size: 2vw;
             color: #72449C;
         }
+
         .info p {
-            font-size: 14px;
+            font-size: 1.2vw;
             line-height: 1.6;
         }
+
         .info .highlight {
-            font-size: 18px;
+            font-size: 1.5vw;
             font-weight: bold;
             margin: 10px 0;
         }
+
         #skill {
             height: 100vh;
             display: flex;
@@ -149,65 +180,139 @@
             background: url('darkstar.png') no-repeat center center fixed;
             background-size: cover;
         }
+
         .header {
             width: 100%;
             display: flex;
             justify-content: center;
             position: absolute;
-            top: 1240px;
+            top: 203%;
             left: 0;
             right: 0;
         }
+
         .header img {
-            width: 125px;
+            width: 10%;
         }
+
         .container {
-            width: 80%;
-            max-width: 1200px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .design, .office {
-            width: 45%;
-            position:relative;
-            margin: 0 2.5%;
-        }
-        .design {
-            top: 5px;
-            left: -130px;
-        }
-        .office {
-            top: -60px;
-            right: 0px;
-        }
+    width: 100%; /* 기본 너비 */
+    max-width: 1200px; /* 최대 너비 */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.design {
+    width: 40%; /* 각 섹션의 너비 */
+    position: relative;
+    margin: 0 0%; /* 좌우 여백 */
+}
+
+.office {
+    width: 40%;
+    position: absolute;
+    top: 215%;
+    left: 55%;
+}
+
         .title {
-            font-size: 55px;
+            font-size: 4.3vw;
             font-family: Arial;
-            font-weight: bold;  
+            font-weight: bold;
             font-style: italic;
             text-align: left;
             margin-bottom: 20px;
         }
-        .office .title {
-            position: relative;
-            left: 133px;
-        }
+
+
+.office-title {
+    font-size: 4.3vw;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-left: 100px; /* "MS OFFICE" 텍스트를 오른쪽으로 이동 */
+}
+
+
         .skill {
             margin: 20px 0;
         }
+
         .skill-title {
-            font-size: 20px;
-            font-family: Arial;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .skill-title span {
-            display: flex;
-            align-items: center;
-        }
+    font-size: 1.5vw;
+    font-family: Arial;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-illustrator {
+    position: relative;
+    top: 10px;
+}
+
+.tooltip-illustrator {
+    position: relative;
+    left: -50px;
+    top: 11px;
+}
+
+.percentage-illustrator {
+    position: relative;
+    left: 0px;
+    top: 18px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 13px;
+    color: #72449C;
+}
+
+.title-photoshop {
+    position: relative;
+    top: 10px;
+}
+
+.tooltip-photoshop {
+    position: relative;
+    left: -56px;
+    top: 11px;
+}
+
+.percentage-photoshop {
+    position: relative;
+    left: 0px;
+    top: 18px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 13px;
+    color: #72449C;
+}
+
+.title-premiere {
+    position: relative;
+    top: 10px;
+}
+
+.tooltip-premiere {
+    position: relative;
+    left: -65px;
+    top: 11px;
+}
+
+.percentage-premiere {
+    position: relative;
+    left: 0px;
+    top: 18px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 13px;
+    color: #72449C;
+}
+
         .progress {
             width: 100%;
             height: 3px;
@@ -216,45 +321,106 @@
             margin-top: 20px;
             overflow: hidden;
         }
-        .progress.excel, .progress.ppt, .progress.word, .progress.access {
+
+        .progress.excel,
+        .progress.ppt,
+        .progress.word,
+        .progress.access {
             width: 65%;
             height: 6px;
             margin: 10px auto;
         }
+
         .progress-bar {
             height: 100%;
             background: #72449C;
             border-radius: 100px;
         }
-        .progress-bar.photoshop { width: 90%; }
-        .progress-bar.illustrator { width: 80%; }
-        .progress-bar.premiere { width: 80%; }
-        .progress-bar.excel { width: 80%; }
-        .progress-bar.ppt { width: 90%; }
-        .progress-bar.word { width: 75%; }
-        .progress-bar.access { width: 75%; }
-        
+
+        .progress-bar.photoshop {
+            width: 90%;
+        }
+
+        .progress-bar.illustrator {
+            width: 80%;
+        }
+
+        .progress-bar.premiere {
+            width: 80%;
+        }
+
+        .progress-bar.excel {
+            width: 80%;
+        }
+
+        .progress-bar.ppt {
+            width: 90%;
+        }
+
+        .progress-bar.word {
+            width: 75%;
+        }
+
+        .progress-bar.access {
+            width: 75%;
+        }
+
         .ms-office-icons {
-            position: absolute;
-            right: -55px;
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            margin-top: -5px;
-        }
-        .ms-office-icons div {
-            text-align: center;
-            width: 80px;
-        }
-        .ms-office-icons img {
-            width: 80px;
-            height: 80px;
-        }
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: -5px;
+}
+
+.ms-office-icons div {
+    text-align: center;
+    width: 80px;
+}
+
+.ms-office-icons img {
+    width: 80px;
+    height: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .ms-office-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ms-office-icons div {
+        width: 60px;
+    }
+
+    .ms-office-icons img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ms-office-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .ms-office-icons div {
+        width: 50px;
+    }
+
+    .ms-office-icons img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
         .astronaut {
             position: absolute;
-            top: 1520px;
-            right: 180px;
-            width: 300px;
+            top: 250%;
+            right: 17%;
+            width: 23%;
         }
 
         .tooltip {
@@ -315,74 +481,88 @@
         #resume {
             padding: 50px;
         }
+
         .header4 {
             width: 100%;
             display: flex;
             justify-content: center;
             position: absolute;
-            top: 1850px;
+            top: 303%;
             left: 0;
             right: 0;
         }
+
         .header4 img {
-            width: 125px;
+            width: 10%;
         }
+
         .resume-content {
             display: flex;
             justify-content: space-between;
         }
+
         .section {
             flex: 1;
             padding: 20px;
         }
+
         .section h1 {
-            margin-bottom: -300x;
             font-size: 2.5em;
         }
+
         .education {
             text-align: left;
             margin-right: 100px;
         }
+
         .experience {
             text-align: left;
             margin-left: 200px;
         }
+
         .ma {
             position: absolute;
-            top: 2190px;
-            left: 60px;
-            width: 250px;
+            top: 360%;
+            left: 5%;
+            width: 20%;
             opacity: 0.75;
         }
+
         .entry {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 20px;
         }
+
         .entry-content {
             flex-grow: 1;
         }
+
         .entry-title {
             font-weight: bold;
             font-size: 1.2em;
             margin-bottom: -5px;
             color: #72449C;
         }
+
         .entry-date {
             font-size: 0.75em;
             margin-bottom: -8px;
         }
+
         .entry-detail {
             font-size: 0.9em;
             margin-bottom: -5px;
         }
+
         .buttons {
             display: flex;
             flex-direction: column;
             margin-left: 10px;
             margin-bottom: -35px;
         }
+
         .buttons a {
             display: block;
             width: 30px;
@@ -398,12 +578,129 @@
             border-radius: 5px;
             transition: background 0.3s;
         }
+
         .buttons a:hover {
             background: white;
             color: black;
         }
+
+        @media screen and (max-width: 768px) {
+            .text-overlay h1 {
+                font-size: 6vw;
+            }
+
+            .text-overlay p {
+                font-size: 3vw;
+            }
+
+            .info h1 {
+                font-size: 4vw;
+            }
+
+            .info h2 {
+                font-size: 3vw;
+            }
+
+            .info p,
+            .info .highlight {
+                font-size: 2.5vw;
+            }
+
+            .skill-title {
+                font-size: 3vw;
+            }
+
+            .astronaut {
+                top: 120%;
+                right: 5%;
+                width: 40%;
+            }
+
+            .ma {
+                left: 5%;
+                width: 40%;
+            }
+
+            .about-header img,
+            .header img,
+            .header4 img {
+                width: 40%;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .design,
+            .office {
+                width: 90%;
+                margin: 20px 0;
+            }
+
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            .profile-pic {
+                width: 50%;
+                margin-bottom: 20px;
+            }
+
+            .info {
+                max-width: 100%;
+            }
+
+            .experience {
+                margin-left: 0;
+            }
+
+            .education {
+                margin-right: 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .text-overlay h1 {
+                font-size: 8vw;
+            }
+
+            .text-overlay p {
+                font-size: 4vw;
+            }
+
+            .info h1 {
+                font-size: 5vw;
+            }
+
+            .info h2 {
+                font-size: 4vw;
+            }
+
+            .info p,
+            .info .highlight {
+                font-size: 3vw;
+            }
+
+            .skill-title {
+                font-size: 4vw;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            .design,
+            .office {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="nav">
         <button type="button" onclick="scrollToSection('home')">HOME</button>
@@ -424,9 +721,13 @@
             <img src="aboutme.png" alt="About Me">
         </div>
         <div class="about-container">
-            <div class="profile-pic">
-                <img src="moon.png" alt="Moon" style="bottom: -335px; left: 0; width: 100%;">
-                <img src="profile.png" alt="Profile Picture" style="bottom: -120px; left: 50%; transform: translateX(-50%); width: 250px;">
+            <div class="profile-pic-container">
+                <div class="moon-image">
+                    <img src="moon.png" alt="Moon">
+                </div>
+                <div class="profile-image">
+                    <img src="profile.png" alt="Profile Picture">
+                </div>
             </div>
             <div class="info">
                 <h1>Hi there! I'm TACK SUYEON</h1>
@@ -439,7 +740,7 @@
         </div>
     </div>
     <div id="skill" class="page-section">
-        <div class="header">    
+        <div class="header">
             <img src="skill.png" alt="Skill">
         </div>
         <div class="container">
@@ -447,80 +748,99 @@
                 <div class="title">DESIGN</div>
                 <div class="skill">
                     <div class="skill-title">
-                        <span style="position: relative; top: 10px;">Adobe Illustrator</span>
-                        <span class="tooltip" style="position: relative; left: -50px; top: 11px;">+
+                        <span class="title-illustrator">Adobe Illustrator</span>
+                        <span class="tooltip tooltip-illustrator">+
                             <span class="tooltiptext">☑️ Card News Design<br>
                                 <div class="horizontal-images">
-                                <img src="card1.png" alt="Card1" style="width: 100px; display:block;">
-                                <img src="card2.png" alt="Card2" style="width: 100px; display:block;">
-                                <img src="card3.jpg" alt="Card3" style="width: 100px; display:block;"></div>
+                                    <img src="card1.png" alt="Card1" style="width: 100px; display:block;">
+                                    <img src="card2.png" alt="Card2" style="width: 100px; display:block;">
+                                    <img src="card3.jpg" alt="Card3" style="width: 100px; display:block;">
+                                </div>
                                 <div class="horizontal-images">
-                                <img src="card4.jpg" alt="Card4" style="width: 100px; display:block;">
-                                <img src="card5.jpg" alt="Card5" style="width: 100px; display:block;">
-                                <img src="card6.jpg" alt="Card6" style="width: 100px; display:block;">
+                                    <img src="card4.jpg" alt="Card4" style="width: 100px; display:block;">
+                                    <img src="card5.jpg" alt="Card5" style="width: 100px; display:block;">
+                                    <img src="card6.jpg" alt="Card6" style="width: 100px; display:block;">
                                 </div>
                                 <div class="horizontal-images">
                                     <img src="card7.jpg" alt="Card7" style="width: 100px; display:block;">
                                     <img src="card8.jpg" alt="Card8" style="width: 100px; display:block;">
-                                    <img src="card9.jpg" alt="Card9" style="width: 100px; display:block;"></div>
+                                    <img src="card9.jpg" alt="Card9" style="width: 100px; display:block;">
+                                </div>
                             </span>
-                            </span>
-                        <span style="position: relative; left: 0px; top: 18px; font-family: Arial; font-weight: bold; font-size: 13px; color: #72449C;">90%</span>
+                        </span>
+                        <span class="percentage-illustrator">90%</span>
                     </div>
-                    <div class="progress"><div class="progress-bar photoshop"></div></div>
+                    <div class="progress">
+                        <div class="progress-bar photoshop"></div>
+                    </div>
                 </div>
+                
                 <div class="skill">
                     <div class="skill-title">
-                        <span style="position: relative; top: 10px;">Adobe Photoshop</span>
-                        <span class="tooltip" style="position: relative; left: -56px; top: 11px;">+
+                        <span class="title-photoshop">Adobe Photoshop</span>
+                        <span class="tooltip tooltip-photoshop">+
                             <span class="tooltiptext">☑️ Text Effect<br>
-                                <img src="texteffect1.png" alt="Text Effect 1" style="width: 350px; display:block;">
+                                <img src="texteffect1.png" alt="Text Effect 1" style="width: 335px; display:block;">
                                 <div class="horizontal-images">
-                                <img src="texteffect2.png" alt="Text Effect 2" style="width: 100px; display:block;">
-                                <img src="texteffect3.png" alt="Text Effect 3" style="width: 100px; display:block;">
+                                    <img src="texteffect2.png" alt="Text Effect 2" style="width: 100px; display:block;">
+                                    <img src="texteffect3.png" alt="Text Effect 3" style="width: 100px; display:block;">
                                 </div>
                                 ☑️ Image Adjustments & Composite (Mockup)<br>☑️ Remove Image Backgrounds<br>
-                                </span>
-                        </span>
-                        <span style="position: relative; left: 0px; top: 18px; font-family: Arial; font-weight: bold; font-size: 13px; color: #72449C;">80%</span>
-                    </div>
-                    <div class="progress"><div class="progress-bar illustrator"></div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">
-                        <span style="position: relative; top: 10px;">Adobe Premiere Pro</span>
-                        <span class="tooltip" style="position: relative; left: -65px; top: 11px;">+
-                            <span class="tooltiptext">☑️ Basic Video Production<br> <br>- Cut Editing<br>- Screen Adjustment<br>- Responsive Subtitles + Animated Subtitles<br>- Effect: Chroma Key, White Balance, Track Matte etc.
-                                <div class="horizontal-images">
-                                <img src="city.gif" alt="City" style="width: 100px; display:block;">
-                                <img src="game1.gif" alt="Game1" style="width: 100px; display:block;">
-                                <img src="game2.gif" alt="Game2" style="width: 100px; display:block;">
-                            </div>
                             </span>
                         </span>
-                        <span style="position: relative; left: 0px; top: 18px; font-family: Arial; font-weight: bold; font-size: 13px; color: #72449C;">80%</span>
+                        <span class="percentage-photoshop">80%</span>
                     </div>
-                    <div class="progress"><div class="progress-bar premiere"></div></div>
+                    <div class="progress">
+                        <div class="progress-bar illustrator"></div>
+                    </div>
                 </div>
+                
+                <div class="skill">
+                    <div class="skill-title">
+                        <span class="title-premiere">Adobe Premiere Pro</span>
+                        <span class="tooltip tooltip-premiere">+
+                            <span class="tooltiptext">☑️ Basic Video Production<br>
+                                <br>- Cut Editing<br>- Screen Adjustment<br>- Responsive Subtitles + Animated Subtitles<br>- Effect: Chroma Key, White Balance, Track Matte etc.
+                                <div class="horizontal-images">
+                                    <img src="city.gif" alt="City" style="width: 100px; display:block;">
+                                    <img src="game1.gif" alt="Game1" style="width: 100px; display:block;">
+                                    <img src="game2.gif" alt="Game2" style="width: 100px; display:block;">
+                                </div>
+                            </span>
+                        </span>
+                        <span class="percentage-premiere">80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar premiere"></div>
+                    </div>
+                </div>                
             </div>
             <div class="office">
-                <div class="title">MS OFFICE</div>
+                <div class="office-title">MS OFFICE</div>
                 <div class="ms-office-icons">
                     <div>
                         <img src="excel.png" alt="Excel">
-                        <div class="progress excel"><div class="progress-bar excel"></div></div>
+                        <div class="progress excel">
+                            <div class="progress-bar excel"></div>
+                        </div>
                     </div>
                     <div>
                         <img src="ppt.png" alt="PowerPoint">
-                        <div class="progress ppt"><div class="progress-bar ppt"></div></div>
+                        <div class="progress ppt">
+                            <div class="progress-bar ppt"></div>
+                        </div>
                     </div>
                     <div>
                         <img src="word.png" alt="Word">
-                        <div class="progress word"><div class="progress-bar word"></div></div>
+                        <div class="progress word">
+                            <div class="progress-bar word"></div>
+                        </div>
                     </div>
                     <div>
                         <img src="access.png" alt="Access">
-                        <div class="progress access"><div class="progress-bar access"></div></div>
+                        <div class="progress access">
+                            <div class="progress-bar access"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -540,7 +860,7 @@
                         <p class="entry-date">2021-2025</p>
                         <p class="entry-detail">Sungshin Women's University</p>
                     </div>
-                </div>  
+                </div>
                 <div class="entry">
                     <div class="entry-content">
                         <p class="entry-title">Department of English and Spanish</p>
@@ -602,8 +922,11 @@
     <script>
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: 'smooth' });
+            section.scrollIntoView({
+                behavior: 'smooth'
+            });
         }
     </script>
 </body>
+
 </html>

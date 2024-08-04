@@ -496,19 +496,138 @@
             width: 10%;
         }
 
-        .resume-content {
-            display: flex;
-            justify-content: space-between;
-        }
+        /* Define base styles for .resume-content */
+.resume-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* 추가: 화면 크기에 따라 줄바꿈 가능 */
+}
 
-        .section {
-            flex: 1;
-            padding: 20px;
-        }
+.resume-content .section {
+    flex: 1;
+    padding: 20px;
+    min-width: 280px; /* 추가: 최소 너비 설정 */
+}
 
-        .section h1 {
-            font-size: 2.5em;
-        }
+.resume-content .section h1 {
+    font-size: 2.8vw;
+    margin-bottom: 15px;
+}
+
+.resume-content .entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.resume-content .entry-content {
+    flex-grow: 1;
+}
+
+.resume-content .entry-title {
+    font-weight: bold;
+    font-size: 1.4vw; /* 수정: vw 단위로 변경 */
+    margin-bottom: -5px;
+    color: #72449C;
+}
+
+.resume-content .entry-date {
+    font-size: 0.95vw; /* 수정: vw 단위로 변경 */
+    margin-bottom: -8px;
+}
+
+.resume-content .entry-detail {
+    font-size: 1.1vw; /* 수정: vw 단위로 변경 */
+    margin-bottom: -5px;
+}
+
+.resume-content .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-bottom: -35px;
+}
+
+.resume-content .buttons a {
+    display: block;
+    width: 2.2vw; /* 수정: vw 단위로 변경 */
+    height: 2.2vw; /* 수정: vw 단위로 변경 */
+    text-align: center;
+    line-height: 2.2vw; /* 수정: vw 단위로 변경 */
+    text-decoration: none;
+    color: white;
+    margin: 2px 0;
+    font-size: 0.9vw; /* 수정: vw 단위로 변경 */
+    padding: -2px;
+    border: 0.2vw solid white; /* 수정: vw 단위로 변경 */
+    border-radius: 0.5vw; /* 수정: vw 단위로 변경 */
+    transition: background 0.3s;
+}
+
+.resume-content .buttons a:hover {
+    background: white;
+    color: black;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .resume-content .section h1 {
+        font-size: 4vw;
+    }
+
+    .resume-content .entry-title {
+        font-size: 3vw;
+    }
+
+    .resume-content .entry-date,
+    .resume-content .entry-detail {
+        font-size: 2.5vw;
+    }
+
+    .resume-content .buttons a {
+        width: 5vw; /* 수정: vw 단위로 변경 */
+        height: 5vw; /* 수정: vw 단위로 변경 */
+        line-height: 5vw; /* 수정: vw 단위로 변경 */
+        font-size: 2vw; /* 수정: vw 단위로 변경 */
+        border: 0.3vw solid white; /* 수정: vw 단위로 변경 */
+        border-radius: 1vw; /* 수정: vw 단위로 변경 */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .resume-content .section h1 {
+        font-size: 5vw;
+    }
+
+    .resume-content .entry-title {
+        font-size: 4vw;
+    }
+
+    .resume-content .entry-date,
+    .resume-content .entry-detail {
+        font-size: 3.5vw;
+    }
+
+    .resume-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-content .section {
+        padding: 10px;
+    }
+
+    .resume-content .buttons a {
+        width: 7vw; /* 수정: vw 단위로 변경 */
+        height: 7vw; /* 수정: vw 단위로 변경 */
+        line-height: 7vw; /* 수정: vw 단위로 변경 */
+        font-size: 3vw; /* 수정: vw 단위로 변경 */
+        border: 0.4vw solid white; /* 수정: vw 단위로 변경 */
+        border-radius: 1.5vw; /* 수정: vw 단위로 변경 */
+    }
+}
+
 
         .education {
             text-align: left;
@@ -698,6 +817,7 @@
                 margin: 10px 0;
             }
         }
+        
     </style>
 </head>
 
